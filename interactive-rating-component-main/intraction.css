@@ -1,0 +1,197 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --custom-grey: hsla(217, 12%, 63%, 0.11);
+}
+
+
+body, 
+.rating::before,
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+body {
+    flex-direction: column;
+    background-color: hsl(216, 12%, 8%);
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+
+section {
+    background-color: hsl(213, 19%, 18%);
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    color: hsl(217, 12%, 63%);
+    padding: 1rem 1rem;
+    border-radius: .5rem;
+    max-width: 23.875rem;
+}
+    
+
+h1 {
+    color: white;
+    padding: 1rem 0;
+    font-weight: 700;
+}
+
+
+button {
+    display: block;
+    margin: auto;
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+    padding: 1rem 6rem;
+    letter-spacing: .5rem;
+    border-radius: 2rem;
+    font-size: .8rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(25, 75%, 73%);
+}
+
+button:active {
+    background-color: hsl(25, 85%, 24%);
+}
+
+
+body > footer {
+    position: sticky;
+    top: 100vh;
+}
+
+
+.thankyou {
+    display: none;
+}
+
+
+.rating {
+    display: block;
+}
+
+.error,
+.thankyou:before,
+h2,
+h4,
+.thankyou p {
+    text-align: center;
+}
+
+
+.error {
+    display: block;
+    opacity: 0;
+    color: red;
+    padding-top: .5rem;
+}
+
+/* Rating state styles */
+
+.rating::before {
+    content: url(images/icon-star.svg);
+    background-color: var(--custom-grey);
+    border-radius: 50%;
+    width: 2.063rem;
+    height: 2.063rem;
+}
+
+
+.rating p {
+    text-align: left;
+    hyphens: auto;
+}
+
+
+.scores {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+}
+
+
+.score {
+    appearance: none;
+    color:hsl(217, 12%, 63%);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: var(--custom-grey);
+    border-radius: 50%;
+    width: 3.125rem;
+    height: 3.125rem;
+    cursor: pointer;
+}
+
+
+/* Cascade matters. Try switching the color positions. It won't work */
+.score::before {
+    content: attr(label);
+}
+
+
+.score:hover {
+    background-color: hsl(217, 12%, 63%);
+    color: white;
+}
+
+
+.score:checked {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+
+
+/* Thank you State styles*/
+.thankyou:before {
+    content: url(images/illustration-thank-you.svg);
+    display: block;
+    padding: 1rem 0;
+}
+
+
+h2 {
+    color: white;
+    padding: .5rem 0 1rem;
+}
+
+
+h4 {
+    padding: 1rem .5rem;
+    width: 70%;
+    margin: 1rem auto;
+    background-color:hsla(217, 12%, 63%, 0.11);
+    color:hsl(25, 97%, 53%);
+    border-radius: 1rem;
+}
+
+
+.thankyou p {
+    padding: .5rem 0;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>> MEDIA QUERY <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+@media screen and (min-width: 37.5rem) {
+    section {
+        border-radius: 2rem;
+        padding: 2rem;
+    }
+
+}

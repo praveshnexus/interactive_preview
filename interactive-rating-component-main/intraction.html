@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="intraction.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; color: pink; }
+    .attribution a { color: white; }
+  </style>
+</head>
+<body>
+
+  <main>
+    <section class="rating">
+      <!-- Rating state start -->
+      <h1>How did we do?</h1>
+
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+
+      <div class="scores">
+        <input class="score" type="radio" name="score" label="1" value="1">
+        <input class="score" type="radio" name="score" label="2" value="2">
+        <input class="score" type="radio" name="score" label="3" value="3">
+        <input class="score" type="radio" name="score" label="4" value="4">
+        <input class="score" type="radio" name="score" label="5" value="5">
+      </div>
+
+      <button type="submit" id="button">SUBMIT</button>
+      <span class="error">Please select a rating</span>
+    </section>
+    <!-- Rating state end -->
+    <section class="thankyou">
+      <!-- Thank you state start -->
+      <h4>You selected <span id="user-rating"><!-- Add rating here --></span> out of 5</h4>
+
+      <h2>Thank you!</h2>
+
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</p>
+      <!-- Thank you state end -->
+    </section>
+
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Pravesh</a>.
+  </footer>
+  <script src="intraction.js"></script>
+</body>
